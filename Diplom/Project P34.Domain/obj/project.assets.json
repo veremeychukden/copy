@@ -4318,25 +4318,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\romap\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Desktop\\Diplomka\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
+      "projectUniqueName": "D:\\Diplom Shag\\copy\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
       "projectName": "Diplom.Domain",
-      "projectPath": "C:\\Users\\PC\\Desktop\\Diplomka\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Desktop\\Diplomka\\Diplom\\Project P34.Domain\\obj\\",
+      "projectPath": "D:\\Diplom Shag\\copy\\Diplom\\Project P34.Domain\\Diplom.Domain.csproj",
+      "packagesPath": "C:\\Users\\romap\\.nuget\\packages\\",
+      "outputPath": "D:\\Diplom Shag\\copy\\Diplom\\Project P34.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\romap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -4348,8 +4343,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\PC\\Desktop\\Diplomka\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\PC\\Desktop\\Diplomka\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
+            "D:\\Diplom Shag\\copy\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj": {
+              "projectPath": "D:\\Diplom Shag\\copy\\Diplom\\Project P34.DataAccess\\Diplom.DataAccess.csproj"
             }
           }
         }
@@ -4394,7 +4389,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
