@@ -14,7 +14,6 @@ D:\Diplom Shag\copy\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom
 D:\Diplom Shag\copy\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.runtimeconfig.dev.json
 D:\Diplom Shag\copy\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.dll
 D:\Diplom Shag\copy\Diplom\Project P34.DataAccess\bin\Debug\netcoreapp3.1\Diplom.DataAccess.pdb
-D:\Diplom Shag\copy\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.csprojAssemblyReference.cache
 D:\Diplom Shag\copy\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.csproj.CoreCompileInputs.cache
 D:\Diplom Shag\copy\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.AssemblyInfoInputs.cache
 D:\Diplom Shag\copy\Diplom\Project P34.DataAccess\obj\Debug\netcoreapp3.1\Diplom.DataAccess.AssemblyInfo.cs

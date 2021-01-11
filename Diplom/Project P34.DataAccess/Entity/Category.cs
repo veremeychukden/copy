@@ -14,9 +14,10 @@ namespace Project_P34.DataAccess.Entity
 
         [Required]
         public string Name { get; set; }
+       
+        public ICollection<Subcategory> Subcategories { get; set; }
 
-        //Id Product 
-        //Id subcategory
+        //Id subcategory 8-1 +
 
     }
 }

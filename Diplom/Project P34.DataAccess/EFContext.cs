@@ -35,6 +35,51 @@ namespace Project_P34.DataAccess
             .WithMany(p => p.Commentariess)
       .HasForeignKey(pt => pt.UserId);
 
+            builder.Entity<Images>().HasOne(pt => pt.Products)
+            .WithMany(p => p.Images)
+      .HasForeignKey(pt => pt.ProductId);
+
+            builder.Entity<Subcategory>().HasOne(pt => pt.Categories)
+           .WithMany(p => p.Subcategories)
+     .HasForeignKey(pt => pt.CategoryId);
+
+            builder.Entity<Product>().HasOne(pt => pt.Subcategories)
+       .WithMany(p => p.Products)
+ .HasForeignKey(pt => pt.SubcategoryId);
+
+            builder.Entity<Commentaries>().HasOne(pt => pt.Products)
+   .WithMany(p => p.Commentariess)
+.HasForeignKey(pt => pt.ProductId);
+
+            builder.Entity<Product>().HasOne(pt => pt.WishLists)
+.WithMany(p => p.Products)
+.HasForeignKey(pt => pt.WishListId);
+
+            builder.Entity<Product>().HasOne(pt => pt.Carts)
+.WithMany(p => p.Products)
+.HasForeignKey(pt => pt.CartId);
+
+            builder.Entity<Product>().HasOne(pt => pt.ViewedProducts)
+.WithMany(p => p.Products)
+.HasForeignKey(pt => pt.viewProductId);
+
+
+            builder.Entity<UserMoreInfo>()
+                .HasOne(u => u.Carts)
+                .WithOne(t => t.UserMoreInfo)
+                .HasForeignKey<Cart>(ui => ui.Id);
+
+            builder.Entity<UserMoreInfo>()
+                .HasOne(u => u.WishLists)
+                .WithOne(t => t.UserMoreInfo)
+                .HasForeignKey<WishList>(ui => ui.Id);
+
+            builder.Entity<UserMoreInfo>()
+                .HasOne(u => u.ViewedProducts)
+                .WithOne(t => t.UserMoreInfo)
+                .HasForeignKey<ViewedProducts>(ui => ui.Id);
+
+
             base.OnModelCreating(builder);
         }
 

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project_P34.DataAccess;
 
 namespace Project_P34.API_Angular.Migrations
 {
     [DbContext(typeof(EFContext))]
-    partial class EFContextModelSnapshot : ModelSnapshot
+    [Migration("20210111140254_links2")]
+    partial class links2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -186,15 +188,10 @@ namespace Project_P34.API_Angular.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ProductId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
 
                     b.HasIndex("UserId");
 
@@ -223,9 +220,6 @@ namespace Project_P34.API_Angular.Migrations
             modelBuilder.Entity("Project_P34.DataAccess.Entity.Product", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("CartId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CountryMade")
@@ -257,21 +251,9 @@ namespace Project_P34.API_Angular.Migrations
                     b.Property<string>("SubcategoryId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("WishListId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("viewProductId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("CartId");
-
                     b.HasIndex("SubcategoryId");
-
-                    b.HasIndex("WishListId");
-
-                    b.HasIndex("viewProductId");
 
                     b.ToTable("tblProduct");
                 });
@@ -469,21 +451,8 @@ namespace Project_P34.API_Angular.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Project_P34.DataAccess.Entity.Cart", b =>
-                {
-                    b.HasOne("Project_P34.DataAccess.Entity.UserMoreInfo", "UserMoreInfo")
-                        .WithOne("Carts")
-                        .HasForeignKey("Project_P34.DataAccess.Entity.Cart", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Project_P34.DataAccess.Entity.Commentaries", b =>
                 {
-                    b.HasOne("Project_P34.DataAccess.Entity.Product", "Products")
-                        .WithMany("Commentariess")
-                        .HasForeignKey("ProductId");
-
                     b.HasOne("Project_P34.DataAccess.Entity.UserMoreInfo", "UserMoreInfo")
                         .WithMany("Commentariess")
                         .HasForeignKey("UserId");
@@ -498,21 +467,9 @@ namespace Project_P34.API_Angular.Migrations
 
             modelBuilder.Entity("Project_P34.DataAccess.Entity.Product", b =>
                 {
-                    b.HasOne("Project_P34.DataAccess.Entity.Cart", "Carts")
-                        .WithMany("Products")
-                        .HasForeignKey("CartId");
-
                     b.HasOne("Project_P34.DataAccess.Entity.Subcategory", "Subcategories")
                         .WithMany("Products")
                         .HasForeignKey("SubcategoryId");
-
-                    b.HasOne("Project_P34.DataAccess.Entity.WishList", "WishLists")
-                        .WithMany("Products")
-                        .HasForeignKey("WishListId");
-
-                    b.HasOne("Project_P34.DataAccess.Entity.ViewedProducts", "ViewedProducts")
-                        .WithMany("Products")
-                        .HasForeignKey("viewProductId");
                 });
 
             modelBuilder.Entity("Project_P34.DataAccess.Entity.Subcategory", b =>
@@ -527,24 +484,6 @@ namespace Project_P34.API_Angular.Migrations
                     b.HasOne("Project_P34.DataAccess.Entity.User", "User")
                         .WithOne("UserMoreInfo")
                         .HasForeignKey("Project_P34.DataAccess.Entity.UserMoreInfo", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Project_P34.DataAccess.Entity.ViewedProducts", b =>
-                {
-                    b.HasOne("Project_P34.DataAccess.Entity.UserMoreInfo", "UserMoreInfo")
-                        .WithOne("ViewedProducts")
-                        .HasForeignKey("Project_P34.DataAccess.Entity.ViewedProducts", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Project_P34.DataAccess.Entity.WishList", b =>
-                {
-                    b.HasOne("Project_P34.DataAccess.Entity.UserMoreInfo", "UserMoreInfo")
-                        .WithOne("WishLists")
-                        .HasForeignKey("Project_P34.DataAccess.Entity.WishList", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

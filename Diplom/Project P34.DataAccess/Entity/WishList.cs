@@ -12,7 +12,9 @@ namespace Project_P34.DataAccess.Entity
     {
         [Key]
         public string Id { get; set; }
-     // id product
-     // id user
+        // id product 1-8 +
+        public ICollection<Product> Products{ get; set; }
+        // id user 1-1
+        public virtual UserMoreInfo UserMoreInfo { get; set; }
     }
 }

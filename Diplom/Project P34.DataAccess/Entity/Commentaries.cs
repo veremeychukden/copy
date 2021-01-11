@@ -17,11 +17,14 @@ namespace Project_P34.DataAccess.Entity
         [Required]
         public DateTime DateComment { get; set; }
 
+
+        //Id userMoreinfo 8-1 +
         public string UserId { get; set; }
         public UserMoreInfo UserMoreInfo { get; set; }
 
-        //Id uSER
-        //Id subcategory
+        //id product 8-1 + 
+        public string ProductId { get; set; }
+        public Product Products { get; set; }
 
     }
 }

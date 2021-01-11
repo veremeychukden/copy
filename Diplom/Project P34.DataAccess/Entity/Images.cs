@@ -13,6 +13,9 @@ namespace Project_P34.DataAccess.Entity
         public string Id { get; set; }
         [Required]
         public string Image { get; set; }
-        //Id product
+
+        //Id product 8-1 +
+        public string ProductId { get; set; }
+        public virtual Product Products { get; set; }
     }
 }

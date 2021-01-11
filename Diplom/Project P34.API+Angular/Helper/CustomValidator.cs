@@ -30,8 +30,7 @@ namespace WebCrudApi.Helpers
             return errors;
         }
 
-        public static List<string> GetErrorsByIdentityResult(
-                                                    IdentityResult result)
+        public static List<string> GetErrorsByIdentityResult(IdentityResult result)
         {
             var listErrors = new List<string>();
             var errors = result.Errors;

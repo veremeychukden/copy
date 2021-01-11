@@ -27,12 +27,22 @@ namespace Project_P34.DataAccess.Entity
 
         [Required]
         public string Image { get; set; }
-
-        //id comment 1user - 8comment
-        //id zhaloba 1user - 8comment
-        //id wishlist 1user - 1wishlist
-        //id cart  1user - 1wishlist
-        public ICollection<Commentaries> Commentariess {get;set;}
+        //id user
         public virtual User User { get; set; }
+
+        //id comment   1user - 8 comment +
+        public ICollection<Commentaries> Commentariess {get;set;}
+        //id wishlist           1user - 1 wishlist +
+        public virtual WishList WishLists { get; set; }
+        //id cart            1user - 1 cart +
+        public virtual Cart Carts { get; set; }
+        //id viewedProduct      1user - 1 viewedProduct +
+        public virtual ViewedProducts ViewedProducts { get; set; }
+
+
+
+
+        //id zhaloba   1user - 8 zhaloba  ?
+        //public ICollection<Commentaries> Zhaloba { get; set; }
     }
 }
